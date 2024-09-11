@@ -1,64 +1,17 @@
-# http-5121-2024
-Web Design (HTML/CSS)
+# http-5121-2024 - Web Design (HTML/CSS)
 
-## Course Outline
+This course delivers the fundamentals of well-formed, semantic HTML markup and CSS. Students will design and build responsive web interfaces based on mockups that are optimized for accessibility and search engines (SEO).
 
-# Module 1: Intro to HTML
-### Topics:
-- HTML structure and important tags
-- HTML lists and tables
+> **Note:** Designing for the web begins with valid markup and styling rules to provide a user interface that meets accessibility standards for the users, and optimized markup and content to meet search engine business strategies.
 
-# Module 2: Intro to HTML
-### Topics:
-- HTML forms
-- HTML semantic layout tags
+Here is a link to [HTML element reference (MDN)](https://developer.mozilla.org/en-US/docs/Web/HTML/Element)
 
-# Module 3: Intro to CSS
-### Topics:
-- CSS box model
-- Basic CSS properties
-- CSS reset, Google Fonts
+![Web Design](https://res.cloudinary.com/dqtokk1cn/image/upload/v1726021928/unnamed-2_rfkzwv.jpg)
 
-# Module 4: Intro to CSS
-### Topics:
-- Intro to flexbox
-- Build a basic flexbox layout
+Here is a sample css code that styles the html body.
 
-# Module 5: Figma Mockup
-### Topics:
-- Figma mockup
-
-# Module 6: CSS Dropdowns and Font Extras
-### Topics:
-- CSS position property and basic CSS dropdown menus
-- Font Awesome, embedding font faces from a file
-
-# Module 7: Mockup to HTML
-### Topics:
-- Building HTML/CSS page from a mockup
-
-# Module 8: Responsive Web Design
-### Topics:
-- CSS media queries
-- Responsive strategies
-
-# Module 9: CSS Grid
-### Topics:
-- CSS grid
-- Other extras
-
-# Module 10: CSS Animations
-### Topics:
-- CSS transitions and transforms
-
-# Module 11: CSS Animations
-### Topics:
-- CSS keyframe animations
-
-# Module 12: CSS Frameworks
-### Topics:
-- Try out CSS frameworks
-
-# Module 13: CSS Preprocessors
-### Topics:
-- Intro to Sass
+```css
+.body {
+  color: black;
+  font-family: Arial;
+}
