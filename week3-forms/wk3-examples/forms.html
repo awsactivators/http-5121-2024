@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>HTML Forms</title>
+  </head>
+  <body>
+    <h1>HTML Forms</h1>
+    <!-- All stuff that belongs to forms - including submit buttons - go inside a FORM element. -->
+    <!-- 
+      There is a method attribute (GET by default). This sets how form
+      data will be submitted.
+      
+      - "get": GET forms (the default if the method attribute is not set) submit the data 
+               via the URL. This is usually used for simple search
+               forms where it doesn't matter if the data is visible in the URL. Searches are
+               not secure data so this doesn't matter. It's also useful to be able to bookmark
+               a search page. Since GET forms pass data via the URL, there is a character limit on
+               GET form data.
+      - "post": POST forms do NOT submit via the URL, so this is inherently more secure (i.e. the
+                data is not immediately exposed). Most forms should use POST as the submission
+                method. Wherever there is more sensitive data, use POST (e.g. a login form or 
+                checkout form).
+    -->
+    <!--
+      There is an action attribute. This value is the destination (URI/URL) where the form data
+      will be submitted to. As we're not doing any server-side form processing in this class, you
+      can omit this attribute for this class, but it's important to know about this attribute.
+    -->
+    <h2>Search form example</h2>
+      <form action="" method="post">
+        <label for="search">Search:</label>
+        <input type="text" id="search" name="q" placeholder="e.g. red fox">
+        <button type="submit">Search now</button>
+      </form>
+  
+
+    <h2>Login form example</h2>
+    <form action="" method="post">
+      <div>
+        <label for="user">Username:</label>
+        <input type="text" id="user" name="user" placeholder="john doe">
+      </div>
+      
+      <div>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" placeholder="*****">
+      </div>
+      
+      <button type="submit">Log in</button>
+    </form>
+    
+
+    <h2>Random form example</h2>
+    <p>The following is just a form used to test out a few form fields.</p>
+    <form action="" method="post">
+      <div>
+        <label for="family-size">Number of people in your household:</label>
+        <input type="number" id="family-size" name="family" placeholder="1" min="1">
+        <input type="text" id="test-number" name="test-number"  inputmode="numeric" placeholder="e.g 2">
+      </div>
+
+      <div>
+        <label for="phone">Phone number:</label>
+        <input type="tel" id="phone" name="phone" placeholder="555-555-5555">
+      </div>
+
+      <div>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="john.doe@example.com">
+      </div>
+
+      <div>
+        <input type="hidden" name="text" value="my test value">
+      </div>
+
+      <div>
+        <div>
+          <input type="checkbox" id="subscribe" name="subscribe" value="subscribed">
+          <label for="subscribe">Subscribe to our newsletter</label>
+        </div>
+      </div>
+
+      <fieldset> <!-- Defines a set of related field-->
+        <legend>Select all your interests:</legend> <!-- Name of the fieldset-->
+        <input type="checkbox" id="wood" name="interests" value="woodworking">
+        <label for="wood">Woodworking</label>
+        <input type="checkbox" id="knitting" name="interests" value="knitting">
+        <label for="knitting">Knitting</label>
+        <input type="checkbox" id="other" name="interests" value="other">
+        <label for="other">Other</label>
+      </fieldset>
+
+      <div>
+        <fieldset> <!-- Defines a set of related field-->
+          <legend>How did you hear about us?</legend> <!-- Name of the fieldset-->
+          <input type="radio" id="linkedin" name="media" value="linkedin">
+          <label for="linkedin">Linkedin</label>
+          <input type="radio" id="indeed" name="media" value="indeed">
+          <label for="indeed">Indeed</label>
+          <input type="radio" id="other2" name="media" value="other">
+          <label for="other2">Other</label>
+        </fieldset>
+      </div>
+
+      
+        <label for="message">Your message:</label>
+        <div>
+        <textarea type="textarea" name="message" id="message" placeholder="Your message here"></textarea>
+      </div>
+
+      <div>
+        <label for="reason">Reason for enquiry:</label>
+        <select name="reason" id="reason">
+          <option value="" disabled selected>Choose a reason</option>
+          <option value="sales">Sales enquiry</option>
+          <optgroup label="other enquiries">
+            <option value="legal">Legal enquiry</option>
+          <option value="general">Gneeral enquiry</option>
+          </optgroup>
+        </select>
+      </div>
+
+      <button type="submit">Submit this form</button>
+      <button type="button">Click to do something</button>
+      <button type="reset">Reset</button>
+    </form>
+    
+  </body>
+</html>
