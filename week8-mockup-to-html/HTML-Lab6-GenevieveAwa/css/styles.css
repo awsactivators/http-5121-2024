@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+/*************************************************************
+ * TABLE OF CONTENTS
+ * =================
+ * 1. GENERAL/DEFAULT STYLES
+ * 2. HEADER
+ * -- 2a. Site name
+ * -- 2b. Navigation
+ * 3. MAIN CONTENT
+ * -- 3a. Hero
+ * 4. FOOTER
+ 
+*************************************************************/
+
+
+/* 1. GENERAL/DEFAULT STYLES */
+:root {
+  --accent-color: #AD00FF;
+}
+
+html {
+  box-sizing:border-box;
+}
+*, *::before, *::after {
+  box-sizing:inherit;
+}
+
+body { /* default font size is 1em = 16px */
+  font: 400 1em "Poppins", sans-serif;
+  margin: 0;
+
+}
+
+.content-wrapper {
+  max-width: 1300px;
+  margin:0 auto;
+}
+
+
+/* 2. HEADER */
+#header {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.84em 0.656em;
+  align-items: center;
+}
+
+#header a:link,
+#header a:visited {
+  color:#000;
+  text-decoration: none;
+}
+
+
+/* -- 2a. Site name */
+#site-name {
+  font-size: 2em; /* 32px / 16px */
+  font-weight: 500;
+  margin: 0;
+  color: #2B0404;
+  text-shadow:0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+
+/* -- 2b. Navigation */
+#main-navigation a:hover {
+  color: var(--accent-color);
+}
+
+.menu {
+  font-size: 1.5em; /* 24px / 16px */
+  font-weight: 500;
+  list-style: none;
+  display: flex;
+  gap: 3.25em;
+  margin: 0;
+  color: #000;
+  text-decoration: none;
+}
+
+
+/* 3. MAIN CONTENT */
+
+/* -- 3a. Hero */
+.hero {
+  background-image: url(../images/macarons\ 1.png);
+  background-repeat: no-repeat;
+  position: relative;
+  height: 600px;
+}
+
+#hero-text h2{
+  text-align: center;
+  color: #fff;
+  text-shadow:0px 4px 4px rgba(0, 0, 0, 0.25);
+  font-weight: 700;
+  font-size: 3em;
+  padding: 153px 302px 44px 302px;
+  margin: 0;
+}
+
+#order {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0;
+}
+
+.button, a:link.button {
+  background-color:#fff;
+  color:var(--accent-color);
+  text-decoration:none;
+  font-family:inherit;
+  font-size: 1.25em; /* 20px / 16px */
+  border-radius: 2.25em;
+  padding: 0.8em 3.1em; /* 16px 62px / 20px*/
+  text-align:center;
+  border: 5px solid var(--accent-color);
+  margin: 0;
+}
+
+.button:hover, a:hover.button {
+  background-color:var(--accent-color);
+  color: #fff;
+  border: 5px solid #fff;
+}
+
+
+/* 4. FOOTER */
+footer {
+  padding-top: 13px;
+  padding-bottom: 13px;
+  padding-left: 21px;
+}
+
