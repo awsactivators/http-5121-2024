@@ -1,0 +1,46 @@
+html {
+  /* ensure padding is included in height so that
+     the transition works properly */
+  box-sizing:border-box; 
+}
+*, *::before, *::after {
+  box-sizing:inherit;
+}
+#main-menu {
+  padding:0;
+  display:flex;
+  column-gap:2em;
+  list-style:none;
+  text-transform:uppercase;
+
+}
+.menu-toggle {
+  display:none;
+}
+@media screen and (max-width:480px) {
+  /* Mobile styles */
+  .menu-toggle {
+    display:block;
+  }
+  #main-menu {
+    flex-direction:column;
+    gap:1em;
+    padding:0 1em; /* 0 top/bottom padding initially */
+    background-color:#eee;
+    /* I only want to animate the height change for the
+       collapse/reveal effect so I'll set the following
+       common sizing and/or positioning as the default. */
+    position:absolute;
+    left:0;
+    width:100%;
+
+    transition:2s; /* animate changes to all animatable properties (in this case, only padding and height will change) */ 
+    overflow:hidden; /* hide anything that falls "outside" the ul container */
+    height:0; /* initially no height - i.e. collapsed */
+  }
+  #main-menu.show-small {
+    padding:1em;
+    height:160px; /* need a set height for the expanded menu */
+  }
+  
+}
