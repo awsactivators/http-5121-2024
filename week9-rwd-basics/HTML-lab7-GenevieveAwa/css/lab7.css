@@ -140,3 +140,24 @@ a:hover {
 }
 
 /* 5. MEDIA QUERIES */
+/* Tablet (768px) */
+@media (max-width: 768px) {
+  .article3 {
+    flex: 1 0 100%;
+  }
+
+  .gallery-container .item {
+    flex-basis: 50%; 
+  }
+}
+
+/* Phone (480px) */
+@media (max-width: 480px) {
+  #main-menu ul {
+    flex-direction: column;
+  }
+
+  .articles-container .article {
+    flex-basis: 100%; 
+  }
+}

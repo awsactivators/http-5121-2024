@@ -48,6 +48,13 @@ body {
   padding: 15px 20px;
 }
 
+#about-me,
+.skills-container,
+.project-container,
+#contact {
+  scroll-margin-top: 100px;
+}
+
 
 /* About Me*/
 #about-me {
@@ -305,3 +312,270 @@ textarea::placeholder {
 }
 
 
+/* Tablet (max-width: 768px) */
+@media screen and (max-width: 768px) {
+  /* Set box-sizing to border-box */
+  * , *::before, *::after {
+    box-sizing: border-box;
+  }
+
+  .header {
+    padding: 15px 20px; 
+    width: 100%; 
+  }
+
+  .menu {
+    gap: 10px; 
+  }
+
+  body {
+    overflow-x: hidden;
+  }
+
+  .header {
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .header a {
+    flex-grow: 1; 
+  }
+
+  .menu {
+    display: flex;
+    justify-content: flex-end; 
+  }
+
+  #about-me .name {
+    padding-left: 100px; 
+    padding-right: 20px;
+  }
+
+  #about-me h1 {
+    font-size: 48px; 
+  }
+
+  .summary {
+    padding: 30px 0 30px 20px;
+    width: auto;
+  }
+
+  #skills-banner {
+    display: flex;
+    justify-content: space-around;
+    gap: 10px;
+    width: 100%;
+  }
+
+  #skills-banner img {
+    display: none;
+  }
+
+  #skills-banner img:nth-child(1),
+  #skills-banner img:nth-child(2),
+  #skills-banner img:nth-child(3) {
+    display: inline-block; 
+  }
+
+  .project-container {
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+  }
+
+  .card {
+    width: 90%;
+    margin-bottom: 20px;
+  }
+
+  .card img {
+    width: 100%;
+    height: auto;
+    padding: 35px 10px 0 10px; 
+    object-fit: cover; 
+  }
+
+  .project-summary {
+    padding-left: 30px;
+    padding-bottom: 40px;
+  
+  }
+  
+  .project-summary p {
+    width: 380px;
+  }
+
+  .contact-container input,
+  .contact-container textarea {
+    width: 100%;
+    max-width: 65%; 
+    margin: 0 auto;
+  }
+
+  .send {
+    width: 0;
+    padding-left: 150px;
+  }
+
+}
+
+/* Tablet (max-width: 630px) */
+@media screen and (max-width: 630px) {
+  #skills-banner {
+    display: flex;
+    justify-content: space-around;
+    gap: 10px;
+    width: 100%
+  }
+
+  #skills-banner img {
+    width: 90px; 
+    height: auto;
+  }
+
+  .project-container {
+    padding: 20px; 
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+  }
+
+  .card {
+    width: 100%; 
+    max-width: 90%; 
+    margin: 10px auto; 
+  }
+
+  .contact-container {
+    max-width: 70%; 
+    margin-left: 40px; 
+  }
+
+  .contact-container h2 {
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: 5px;
+    padding: 40px 0 50px 70px;
+  }
+
+  input::placeholder,
+  textarea::placeholder {
+    color: #fff;
+    opacity: 1; 
+    font-size: 16px;
+}
+
+  .contact-container input,
+  .contact-container textarea,
+  .send button {
+    width: 80%; 
+    max-width: 100%; 
+     
+  }
+
+  #contact::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%; 
+    height: 100%;
+    background-color: black; 
+    transform: skewX(-10deg); /* Adjust skew angle */
+    transform-origin: top right;
+    z-index: 0;
+  }
+
+  .send {
+    width: 60%; 
+    padding-left: 120px;
+  }
+}
+
+/* Tablet (max-width: 510px) */
+@media screen and (max-width: 510px) {
+
+}
+
+
+/* Mobile (max-width: 320px) */
+@media screen and (max-width: 320px) {
+  .header {
+    padding: 10px 20px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .menu {
+    font-size: 14px;
+    column-gap: 15px;
+    flex-direction: column; /* Stack menu items vertically */
+  }
+
+  #about-me {
+    height: 830px; 
+  }
+
+  #about-me .name {
+    padding-left: 20px; /* Adjust padding for mobile */
+    padding-right: 20px;
+  }
+
+  #about-me h1 {
+    font-size: 36px; /* Smaller font size on mobile */
+  }
+
+  .summary {
+    padding: 20px;
+    width: auto;
+  }
+
+  #skills-banner {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 10px;
+    justify-items: center;
+  }
+
+  #skills-banner img {
+    display: none;
+  }
+
+  #skills-banner img:nth-child(1),
+  #skills-banner img:nth-child(2) {
+    display: inline-block; /* Show only the first two images */
+    width: 60px; /* Adjust size as needed */
+    height: auto;
+  }
+
+  #skills-banner img {
+    width: 60px; 
+    height: auto;
+  }
+
+  .project-container {
+    padding: 20px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 100%; /* Full-width cards on mobile */
+    margin-bottom: 20px;
+  }
+
+  input, textarea {
+    width: 100%; /* Full-width form fields */
+  }
+
+  .send {
+    padding-left: 0;
+    text-align: center;
+  }
+
+  .footer-container .social-icons a {
+    padding-right: 10px; /* Adjust icon spacing */
+  }
+}
