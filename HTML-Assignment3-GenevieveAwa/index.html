@@ -20,131 +20,140 @@
 
 </head>
 <body>
-  <header>
-    <div class="header">
-      <a href="./"><img src="./images/kvieve-2-2.png" alt="kvieve logo"></a>
-      <nav id="main-navigation">
-          <ul class="menu">
-            <li><a href="#about-me" id="menu-about">About Me</a></li>
-            <li><a href="#skill">Skills</a></li>
-            <li><a href="#project">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-      </nav>
-    </div>
-  </header>
-
-  <main>
-    <!-- About Me Start -->
-     <div id="about-me">
-      <section>
-        <div class="name">
-          <p>Hi, I am</p>
-          <h1>Genevieve Awa</h1>
-          <p class="job-title">DevOps Enginner | Software Developer</p>
+  <div class="container">
+    <header>
+      <div class="header">
+        <div  class="logo">
+          <a href="./"><img src="./images/kvieve-2-2.png" alt="kvieve logo"></a>
+          <img src="./images/menu.png" alt="cancel icon" onclick="toggleMenu()" class="menu-toggle menu-icon">
         </div>
-      
-        <div class="summary">
-          <p>DevOps/Cloud Infrastructure Engineer with 6+ years of experience in designing, implementing, and maintaining scalable infrastructure for enterprise applications. Skilled in developing automation frameworks, optimizing CI/CD pipelines, managing cloud environments (AWS, GCP), and building full-stack software solutions (frontend and backend).</p>
+        <nav id="main-navigation">
+            <ul class="menu" id="main-menu">
+              <li><a href="#about-me" id="menu-about">About Me</a></li>
+              <li><a href="#skill">Skills</a></li>
+              <li><a href="#project">Projects</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+      </div>
+    </header>
+  
+    <main>
+      <!-- About Me Start -->
+       <div id="about-me">
+        <section>
+          <div class="name" id="name">
+            <p>Hi, I am</p>
+            <h1>Genevieve Awa</h1>
+            <p class="job-title">DevOps Enginner | Software Developer</p>
+          </div>
+        
+          <div class="summary">
+            <p>DevOps/Cloud Infrastructure Engineer with 6+ years of experience in designing, implementing, and maintaining scalable infrastructure for enterprise applications. Skilled in developing automation frameworks, optimizing CI/CD pipelines, managing cloud environments (AWS, GCP), and building full-stack software solutions (frontend and backend).</p>
+          </div>
+        </section>
+  
+        <div class="resume-btn">
+          <button type="button" class="resume">Resume <img src="./images/Vector.png" alt=""></button>
+        </div>
+       </div>
+      <!-- About Me End -->
+  
+      <!-- Skills Start -->
+      <div class="skills-container" id="skill">
+        <div id="skills-banner">
+           <!-- Group 1 for Large Screens -->
+          <img src="./images/skills-img/js.png" alt="Javascript image" data-group="1" data-cycle="1">
+          <img src="./images/skills-img/html5.png" alt="HTML5 image" data-group="1" data-cycle="1">
+          <img src="./images/skills-img/cs.png" alt="C sharp image" data-group="1" data-cycle="1">
+          <img src="./images/skills-img/nodejs.png" alt="Nodejs image" data-group="1" data-cycle="1">
+          <img src="./images/skills-img/python.png" alt="Python image" data-group="1" data-cycle="1">
+
+          <!-- Next sub-group for Group 1 -->
+
+        </div>
+      </div>
+      <!-- Skills End -->
+  
+      <!-- Projects Start -->
+      <div class="project-container" id="project">
+        <article>
+          <div class="card">
+            <img src="./images/devops-banner.png" alt="Devops Image">
+            <div class="project-summary">
+              <h2><b>DevOps</b></h2>
+              <p>In my DevOps projects, I focus on building and managing scalable, automated infrastructure solutions. I specialize in CI/CD pipeline implementation, cloud architecture, container orchestration, and deployment automation, ensuring efficient and secure delivery of applications</p>
+            </div>
+            <div class="view-btn">
+              <button type="button">View Projects</button>
+            </div>
+          </div>
+        </article>
+  
+        <article>
+          <div class="card">
+            <img src="./images/software-dev-banner.png" alt="Software Image">
+            <div class="project-summary">
+              <h2><b>Software Development</b></h2>
+              <p>My software development projects involve designing and building user-centered applications, utilizing both frontend and backend technologies. I aim to create intuitive, responsive, and functional solutions that address real-world problems through clean code and innovative design.</p>
+            </div>
+            <div class="view-btn">
+              <button type="button">View Projects</button>
+            </div>
+          </div>
+        </article>
+      </div>
+      <!-- Projects End -->
+  
+      <!-- Contact Start -->
+      <section>
+        <div id="contact">
+          <div class="contact-container">
+            <h2>Leave me a message</h2>
+            <form>
+              <div class="contact-input">
+                <input type="text" placeholder="Name">
+              </div>
+              <div class="contact-input">
+                <input type="text" placeholder="Email">
+              </div>
+              <div class="contact-input">
+                <input type="text" placeholder="Subject">
+              </div>
+              <div class="contact-textarea">
+                <textarea name="message" id="message" placeholder="Message"></textarea>
+              </div>
+              <div class="send">
+                <button type="submit">Send</button>
+              </div>
+            </form>
+          </div>
         </div>
       </section>
-
-      <div class="resume-btn">
-        <button type="button" class="resume">Resume <img src="./images/Vector.png" alt=""></button>
-      </div>
-     </div>
-    <!-- About Me End -->
-
-    <!-- Skills Start -->
-    <div class="skills-container" id="skill">
-      <div id="skills-banner">
-        <img src="./images/skills-img/js.png" alt="Javascript image">
-        <img src="./images/skills-img/html5.png" alt="HTML5 image">
-        <img src="./images/skills-img/cs.png" alt="C sharp image">
-        <img src="./images/skills-img/nodejs.png" alt="Nodejs image">
-        <img src="./images/skills-img/python.png" alt="Python image">
-      </div>
-    </div>
-    <!-- Skills End -->
-
-    <!-- Projects Start -->
-    <div class="project-container" id="project">
-      <article>
-        <div class="card">
-          <img src="./images/devops-banner.png" alt="Devops Image">
-          <div class="project-summary">
-            <h2><b>DevOps</b></h2>
-            <p>In my DevOps projects, I focus on building and managing scalable, automated infrastructure solutions. I specialize in CI/CD pipeline implementation, cloud architecture, container orchestration, and deployment automation, ensuring efficient and secure delivery of applications</p>
-          </div>
-          <div class="view-btn">
-            <button type="button">View Projects</button>
-          </div>
+      <!-- Contact End -->
+  
+      <div class="contact-overflow"></div>
+    </main>
+  
+    <footer>
+      <div class="footer-container">
+        <div class="back-to-top">
+          <a href="#about-me">
+            <p id="up-arrow">^</p>
+            <p id="back">Back to top</p>
+          </a>
         </div>
-      </article>
-
-      <article>
-        <div class="card">
-          <img src="./images/software-dev-banner.png" alt="Software Image">
-          <div class="project-summary">
-            <h2><b>Software Development</b></h2>
-            <p>My software development projects involve designing and building user-centered applications, utilizing both frontend and backend technologies. I aim to create intuitive, responsive, and functional solutions that address real-world problems through clean code and innovative design.</p>
-          </div>
-          <div class="view-btn">
-            <button type="button">View Projects</button>
-          </div>
+        <div class="social-icons">
+          <a href=""><i class="fa fa-github"></i></a>
+          <a href=""><i class="fa fa-linkedin"></i></a>
+          <a href=""><i class="fa fa-medium"></i></a>
+          <a href=""><i class="fa fa-envelope"></i></a>
         </div>
-      </article>
-    </div>
-    <!-- Projects End -->
-
-    <!-- Contact Start -->
-    <section>
-      <div id="contact">
-        <div class="contact-container">
-          <h2>Leave me a message</h2>
-          <form>
-            <div class="contact-input">
-              <input type="text" placeholder="Name">
-            </div>
-            <div class="contact-input">
-              <input type="text" placeholder="Email">
-            </div>
-            <div class="contact-input">
-              <input type="text" placeholder="Subject">
-            </div>
-            <div class="contact-textarea">
-              <textarea name="message" id="message" placeholder="Message"></textarea>
-            </div>
-            <div class="send">
-              <button type="submit">Send</button>
-            </div>
-          </form>
+        <div class="copyright">
+          <p>© 2024 Genevieve Awa</p>
         </div>
       </div>
-    </section>
-    <!-- Contact End -->
-
-    <div class="contact-overflow"></div>
-  </main>
-
-  <footer>
-    <div class="footer-container">
-      <div class="back-to-top">
-        <a href="#about-me">
-          <p id="up-arrow">^</p>
-          <p id="back">Back to top</p>
-        </a>
-      </div>
-      <div class="social-icons">
-        <a href=""><i class="fa fa-github"></i></a>
-        <a href=""><i class="fa fa-linkedin"></i></a>
-        <a href=""><i class="fa fa-medium"></i></a>
-        <a href=""><i class="fa fa-envelope"></i></a>
-      </div>
-      <div class="copyright">
-        <p>© 2024 Genevieve Awa</p>
-      </div>
-    </div>
-  </footer>
+    </footer>
+  </div>
 </body>
 </html>

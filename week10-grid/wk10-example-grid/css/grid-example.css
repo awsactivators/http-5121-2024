@@ -1,0 +1,57 @@
+:root {
+  /* You can declare CSS custom properties (AKA 
+   * variables) in a :root pseudo-class.
+   * Use the variables in other rules with
+   * var(--varname).
+   * Custom properties start with a double-dash (--).
+   */
+  --purple: #9393ff;
+  --orange: #ffdc9c;
+}
+.container {
+  background-color: var(--purple); 
+  padding:1em;
+}
+.item {
+  background-color: var(--orange);
+  border:2px solid orange;
+}
+
+/* BASIC EXAMPLE */
+#example-1 {
+  
+}
+
+/* SECOND EXAMPLE */
+
+/* LAYOUT EXAMPLE */
+/* Using template areas */
+.grid {
+  
+}
+.grid > * {
+  border:1px solid #000;
+}
+
+#header {
+  
+}
+#main {
+  
+}
+#sidebar-one {
+  
+}
+#sidebar-two {
+  
+}
+#footer {
+  
+}
+/* If you want to support older browsers, for your default styles,
+ * use flex for the layout, then add a @supports query for
+ * browsers which can use grid.
+ */
+@supports (display:grid) {
+
+}
