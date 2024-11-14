@@ -3,41 +3,61 @@ function toggleMenu() {
   menu.classList.toggle("show-small");
 
   let name = document.getElementById("name");
+  let menuIcon = document.getElementById("menu-icon");
+
   if (menu.classList.contains("show-small")) {
     name.style.paddingTop = "150px";
+    menuIcon.src = "./images/cancel.png";
   } else {
     name.style.paddingTop = "0px"; 
+    menuIcon.src = "./images/menu.png";
   }
 }
 
-document.addEventListener("DOMContentLoaded", () => {
-  const skillsImages = document.querySelectorAll("#skills-banner img");
-  const groups = { 1: 6, 2: 10 }; // Adjust sub-group counts based on screen size
-  let currentGroup = 1;
-  let currentCycle = 1;
+/* Skills Image slider*/
 
-  function rotateSkillsImages() {
-    // Hide all images
-    skillsImages.forEach(img => img.style.display = "none");
+document.addEventListener("DOMContentLoaded", function () {
+  const skillsBanner = document.getElementById("skills-banner");
+  const images = Array.from(skillsBanner.getElementsByClassName("image"));
+  let visibleImages = 5; // Default for desktop
+  let index = 0;
 
-    // Show only images that match the current group and cycle
-    skillsImages.forEach(img => {
-      if (parseInt(img.getAttribute("data-group")) === currentGroup &&
-          parseInt(img.getAttribute("data-cycle")) === currentCycle) {
-        img.style.display = "inline-block";
-      }
-    });
+  // Function to update visible images based on screen size
+  function updateVisibleImages() {
+    const width = window.innerWidth;
 
-    // Move to the next cycle or reset
-    currentCycle++;
-    if (currentCycle > groups[currentGroup]) {
-      currentCycle = 1;
+    if (width <= 320) {
+        visibleImages = 2;
+    } else if (width <= 480) {
+        visibleImages = 2;
+    } else if (width <= 630) {
+        visibleImages = 3;
+    } else if (width <= 768) {
+        visibleImages = 3;
+    } else {
+        visibleImages = 5;
     }
+    index = 0; // Reset index when changing the number of visible images
+    updateImagesDisplay();
+}
+  // Function to show only a certain number of images
+  function updateImagesDisplay() {
+      images.forEach((img, i) => {
+          img.style.display = i >= index && i < index + visibleImages ? "inline-block" : "none";
+      });
   }
 
-  // Initial display
-  rotateSkillsImages();
+  // Function to scroll groups of images every 3 seconds
+  function scrollImages() {
+      index = (index + visibleImages) % images.length;
+      updateImagesDisplay();
+  }
 
-  // Rotate every 5 seconds
-  setInterval(rotateSkillsImages, 5000);
+  // Initial setup
+  updateVisibleImages();
+  setInterval(scrollImages, 2000);
+
+  // Listen for window resize to adjust the visible images dynamically
+  window.addEventListener("resize", updateVisibleImages);
 });
+

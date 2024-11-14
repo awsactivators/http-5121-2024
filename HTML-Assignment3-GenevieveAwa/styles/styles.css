@@ -10,6 +10,7 @@ body {
   font-weight: 400;
   font-style: normal;
   background-color: black;
+  overflow-x: hidden;
 }
 
 
@@ -108,6 +109,9 @@ h1 {
   padding: 10px 35px;
   border: 3px solid var(--accent-color);
   background-color: #fff;
+  cursor: pointer;
+  color: black;
+  text-decoration: none;
 }
 
 .resume:focus {
@@ -121,6 +125,7 @@ h1 {
 .skills-container {
   background-color: black;
   border-bottom: 1px solid var(--accent-color);
+  overflow: hidden;
 }
 
 #skills-banner {
@@ -137,7 +142,8 @@ h1 {
   border-bottom: 1px solid var(--accent-color);
   padding: 60px 80px;
   display: flex;
-  justify-content: space-between;
+  /* justify-content: space-between; */
+  justify-content: space-evenly;
 }
 
 .card {
@@ -317,6 +323,12 @@ textarea::placeholder {
 }
 
 
+/* Desktop (default) - Display 5 images */
+@media (min-width: 769px) {
+  #skills-banner img {
+    width: auto; 
+  }
+}
 
 
 /* Tablet (max-width: 768px) */
@@ -370,13 +382,15 @@ textarea::placeholder {
 
   #skills-banner {
     display: flex;
-    justify-content: space-around;
-    gap: 10px;
+    justify-content: space-evenly;
+    overflow: hidden;
+    /* gap: 20px; */
     width: 100%;
   }
 
   #skills-banner img {
     display: none;
+    width: 130px;
   }
 
   #skills-banner img:nth-child(1),
@@ -437,11 +451,12 @@ textarea::placeholder {
     display: flex;
     justify-content: space-around;
     gap: 10px;
-    width: 100%
+    width: 100%;
+    overflow: hidden;
   }
 
   #skills-banner img {
-    width: 90px; 
+    width: 100px; 
     height: auto;
   }
 
@@ -512,6 +527,11 @@ textarea::placeholder {
   #about-me {
     height: 710px; 
     padding-top: 90px;
+  }
+
+  #skills-banner img {
+    display: none;
+    width: 100px;
   }
 
   #contact {
@@ -755,7 +775,7 @@ textarea::placeholder {
   }
 
   #skills-banner img {
-    width: 150px;
+    width: 120px;
   }
 
   #skills-banner img:nth-child(3) {
