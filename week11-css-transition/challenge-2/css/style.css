@@ -1,0 +1,60 @@
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+#start {
+  border-radius:5px;
+  padding:0.8em 1.5em;
+  background-color:#ddd;
+  text-transform:uppercase;
+  border:0;
+  box-shadow:0 5px 0 #aaa;
+  margin-bottom:1em;
+  transition:all 0.2s;
+  overflow:hidden;
+}
+#start:active {
+  box-shadow:0 0 0 #aaa;
+  transform:translateY(5px);
+}
+#stage-one {
+  height:300px;
+  border:1px solid black;
+  position:relative;
+  overflow:hidden;
+}
+#launcher {
+  width:50px;
+  height:20px;
+  background-color:red;
+  position:absolute;
+  left:-20px;
+  bottom:-40px;
+  transform:rotate(-80deg);
+  transition:all 0.1s;
+}
+#launcher.launch {
+  transform:translate(5px, -15px) rotate(-80deg);
+}
+#ball-wrap {
+  position:absolute;
+  bottom:0;
+  right:80%;
+  width:20%;
+  /* transition:all 0.8s; */
+  transform-origin:bottom right;
+  /* border:1px dashed #000; */
+}
+#ball {
+  height:35px;
+  width:35px;
+  border-radius:50%;
+  background-color:#0000ff;  
+}
+#ball-wrap.animate {
+  width:20%;
+  transform:rotate(180deg);
+  transition:all 0.6s;
+}

@@ -1,0 +1,137 @@
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+/* CAR */
+#car {
+  position:relative;
+  display:inline-block; /* shrink to fit contents, so that wheels can be placed relative to the left and right sides of the car */
+  transition:left 2s;
+  left:0;
+}
+#stage:hover  #car {
+  left:100%;
+}
+/* trapezoid - the top part of the car */
+/* If you're interested in more CSS shapes, search up "CSS shapes" on CSS-tricks.com */
+#trap { 
+  border-bottom: 50px solid red; 
+  border-left: 40px solid transparent; 
+  border-right: 50px solid transparent; 
+  height: 0; 
+  width: 200px; 
+  margin-left:50px;
+}
+#rect {
+  width:300px;
+  height:60px;
+  border-radius:10px;
+  background-color:red;
+  margin-top:-10px;
+}
+.wheel {
+  border-radius:50%;
+  width:50px;
+  height:50px;
+  background-color:#000;
+  position:absolute;
+  bottom:0;
+  transform:translateY(50%);
+}
+#left.wheel {
+  left:40px;
+}
+#right.wheel {
+  right:40px;
+}
+/* PACMAN */
+#body, #dot {
+  display:inline-block;
+  vertical-align:middle;
+}
+#dot {
+  width:20px;
+  height:20px;
+  border-radius:50%;
+  border:1px solid #000;
+  position:relative;
+  left:20%;
+  z-index:-10;
+}
+#top, #bottom {
+  width:100px;
+  height:50px;
+  background-color:yellow;
+  transition:all 0.5s;
+  /* border:1px solid #000; */
+}
+#top {
+  border-radius:50px 50px 0 0;
+  transform-origin:center bottom; 
+}
+#bottom {
+  border-radius:0 0 50px 50px;
+  transform-origin:center top;   
+}
+#pacman-stage:hover #top {
+  transform:rotate(-45deg);
+}
+#pacman-stage:hover #bottom {
+  transform:rotate(45deg);
+}
+#pacman-stage:hover #dot {
+  left:-75px;
+  transition:all 0.5s;
+}
+/* PACMAN ALTERNATIVE */
+/* the #food styling/positioning stuff is pretty much the same */
+#pacman, #food {
+  display:inline-block;
+  vertical-align:middle; /* display along their center lines */
+}
+#food {
+  width:20px;
+  height:20px;
+  border-radius:50%;
+  border:1px solid #000;
+  position:relative;
+  left:20%;
+  z-index:-10;
+}
+#pacman::before, #pacman::after {
+  display:block; /* need this so that you can set width and height */
+  content:''; /* this forces content even if empty so that the pseudo-element shows */
+  width:100px;
+  height:50px;
+  background-color:yellow;
+  transition:all 0.5s;
+}
+#pacman::before {
+  border-radius:50px 50px 0 0;
+  transform-origin:center bottom;
+}
+#pacman::after {
+  border-radius:0 0 50px 50px;
+  transform-origin:center top;
+}
+#stage-2:hover #pacman::before {
+  transform:rotate(-45deg);
+}
+#stage-2:hover #pacman::after {
+  transform:rotate(45deg);
+}
+#stage-2:hover #food {
+  left:-75px;
+  transition:all 0.5s;
+}
+
+
+
+
+
+
+
+
+

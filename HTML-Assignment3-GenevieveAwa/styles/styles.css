@@ -233,7 +233,6 @@ input {
 
 .contact-input {
   padding-bottom: 70px;
-
 }
 
 textarea {
@@ -251,12 +250,12 @@ textarea {
 
 input::placeholder,
 textarea::placeholder {
-    color: #fff;
-    opacity: 1; 
+  color: #fff;
+  opacity: 1; 
 }
 
 .send {
-  
+  padding-bottom: 40px;
   padding-top: 50px;
   padding-left: 200px;
 }
@@ -280,6 +279,8 @@ textarea::placeholder {
   background-color: var(--bg-color);
   min-height: 40px;
 }
+
+
 
 
 
