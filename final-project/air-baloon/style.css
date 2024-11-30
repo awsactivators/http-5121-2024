@@ -1,0 +1,61 @@
+body{margin: 0; padding: 0; background: #ccc;}
+
+#clouds{background: url(bg.png); background-size: cover; height: 100vh; overflow: hidden; position: relative; margin-top: 0;}
+#clouds div{position: absolute; width: 230px;}
+#clouds div img{display: block; margin-left: auto; margin-right: auto;}
+.Blittle img{width: 42px; float: left;}
+.BlittleUp img{width: 51px; float: right;}
+.Bmedium img{width: 85px; float: left;}
+.BmediumUp img{width: 185px; float: right;}
+.BmediumUpUp img{width: 140px;}
+.Bbig img{width: 280px; float: right;}
+
+.Blittle{animation: moveclouds 14s infinite linear forwards;}
+.BlittleUp{animation: moveclouds 16s infinite linear forwards;}
+.Bmedium{animation: moveclouds 17s infinite linear forwards;}
+.BmediumUp{animation: moveclouds 18s infinite linear forwards;}
+.BmediumUpUp{animation: moveclouds 19s infinite linear forwards;}
+.Bbig{animation: moveclouds 22s infinite linear forwards;}
+
+.BC-1{left: 5%;}
+.BC-2{left: 14.5%;}
+.BC-3{left: 25%;}
+.BC-4{left: 37%;}
+.BC-5{left: 50%;}
+.BC-6{left: 62%;}
+.BC-7{left: 75%;}
+.BC-8{left: 87%;}
+
+.BC-1 img{margin-top: 500px;}
+.BC-2 img{margin-top: 100px;}
+.BC-3 img{margin-top: 300px;}
+.BC-4 img{margin-top: 150px;}
+.BC-5 img{margin-top: 350px;}
+.BC-6 img{margin-top: 0;}
+.BC-7 img{margin-top: 700px;}
+.BC-8 img{margin-top: 100px;}
+
+.Blittle.BC-8 img{margin-top: 350px;}
+.Blittle.BC-3 img{margin-top: 0px;}
+.Blittle.BC-4 img{margin-top: 700px;}
+
+@keyframes moveclouds{
+    0%{transform: translate(0, 700px);}
+    100%{transform: translate(0, -1200px);}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
