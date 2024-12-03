@@ -1,33 +1,18 @@
 // Variables 
-const playButton = document.getElementById("play-button");
-const resetButton = document.getElementById("reset-button");
-const gameArea = document.getElementById("game-area");
-const scoreboard = document.getElementById("scoreboard");
-const instructionsBox = document.getElementById("instructions-box");
-const header = document.getElementById("header");
-const scoreDisplay = document.getElementById("score");
-const timeDisplay = document.getElementById("time");
-const balloons = document.querySelectorAll(".balloon");
+var playButton = document.getElementById("play-button");
+var resetButton = document.getElementById("reset-button");
+var gameArea = document.getElementById("game-area");
+var scoreboard = document.getElementById("scoreboard");
+var instructionsBox = document.getElementById("instructions-box");
+var header = document.getElementById("header");
+var scoreDisplay = document.getElementById("score");
+var timeDisplay = document.getElementById("time");
+var balloons = document.querySelectorAll(".balloon");
 
 var isDay = true;
 var score = 0;
 var timeLeft = 60;
 var timerInterval;
-
-
-// Function to toggle day and night background themes
-function toggleDayNight() {
-  isDay = !isDay;
-
-  // Update background, button colors, and footer text color
-  document.documentElement.style.setProperty(
-    "--background-day",
-    isDay ? "linear-gradient(to bottom, #87ceeb, #1e90ff)" : "linear-gradient(to bottom, #2c3e50, #34495e)"
-  );
-  document.documentElement.style.setProperty("--button-day-bg", isDay ? "#fff" : "#000");
-  document.documentElement.style.setProperty("--button-day-text", isDay ? "#000" : "#fff");
-  document.documentElement.style.setProperty("--footer-day", isDay ? "black" : "white");
-}
 
 
 
@@ -84,7 +69,7 @@ function popBalloon(event) {
   scoreDisplay.textContent = score;
 
   // Stop the animation and create a pop effect
-  const balloon = event.target;
+  var balloon = event.target;
   balloon.style.animation = "none"; 
   balloon.style.opacity = "0"; 
   setTimeout(() => {
@@ -152,9 +137,6 @@ function resetGame() {
 playButton.addEventListener("click", startGame);
 resetButton.addEventListener("click", resetGame);
 
-
-// Start the day-night cycle
-setInterval(toggleDayNight, 10000); 
 
 
 // Initialize by hiding balloons

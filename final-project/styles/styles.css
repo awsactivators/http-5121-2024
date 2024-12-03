@@ -23,12 +23,50 @@ body {
   justify-content: space-between;
   height: 100vh;
   transition: background 1s ease-in-out;
-  
+  animation: dayNightCycle 40s infinite;
 }
+
+/* keyframes for background transitions */
+@keyframes dayNightCycle {
+  0%, 50% {
+    background: var(--background-day);
+  }
+  51%, 100% {
+    background: var(--background-night);
+  }
+}
+
 
 
 /* Header */
 /********************************************************/
+
+.skip-link {
+  position: absolute;
+  top: -50px;
+  left: 0;
+  background: #000;
+  color: #fff;
+  padding: 10px;
+  z-index: 100;
+  text-decoration: none;
+  border: 2px solid #fff;
+  border-radius: 5px;
+  transition: top 0.3s ease;
+}
+
+
+/* Make the skip link visible */
+.skip-link:focus {
+  top: 10px;
+}
+
+
+#play-button:focus {
+  outline: 3px solid #ff9800; /* Visible outline when focused */
+  outline-offset: 2px;
+}
+
 
 header h1 {
   color: white;
@@ -101,6 +139,7 @@ header.moved-up {
   row-gap: 150px;
 }
 
+/* Designsign the ballons using position*/
 .balloon {
   position: absolute;
   width: 80px;
@@ -110,7 +149,7 @@ header.moved-up {
   animation: floatUp 8s linear infinite;
   display: none;
   /* transition: opacity 0.2s ease-in-out; */
-  z-index: 1
+  z-index: 1;
 }
 
 .balloon::before {
@@ -193,7 +232,7 @@ header.moved-up {
   }
 }
 
-
+/*Random animation time or the balloons*/
 .balloon:nth-child(1) { 
   left: 20%; animation-delay: 0s; 
   animation: floatUp 7s linear infinite;
@@ -260,6 +299,18 @@ header.moved-up {
 footer p {
   color: var(--footer-day);
   transition: color 1s ease-in-out;
+  animation: footerColorCycle 40s infinite;
+}
+
+
+/* Keyframes for footer text color transitions */
+@keyframes footerColorCycle {
+  0%, 50% {
+    color: var(--footer-day);
+  }
+  51%, 100% {
+    color: var(--footer-night);
+  }
 }
 
 
